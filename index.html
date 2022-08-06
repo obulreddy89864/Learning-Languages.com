@@ -42,9 +42,58 @@
 <body>
         
     <p>--> you can learn any language by this site<br>--> or you can go through this link</p>
-    <a href="hello.html">clickme</a>
-    <br>
-    <a href="www.poki.com">Click to play</a>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .column {
+            float: left;
+            width: 33.33;
+            padding: 5px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <div class="row">
+        <div class="column">
+            <img src="c-logo.jpg" alt="c" style="width:150px;height:150px;">
+        </div>
+        <div class="column">
+            <img src="CPP-logo.jpg" alt="CPP" style="width:150px;height:150px;">
+        </div>
+        <div class="column">
+            <img src="java.jpg" alt="JS" style="width:150px;height:150px;">
+        </div>
+        <div class="column">
+            <img src="python.jpg" alt="JS" style="width:150px;height:150px;">
+        </div>
+        <div class="column">
+            <img src="html.jpg" alt="JS" style="width:150px;height:150px;">
+        </div>
+        <div class="column">
+            <img src="css.jpg" alt="JS" style="width:150px;height:150px;">
+        </div>
+        <div class="column">
+            <img src="java-script.png" alt="JS" style="width:150px;height:150px;">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+           <a href="hello.html">..........click Here..........</a>
+        </div>
+        <div class="column">
+            <a href="cpp.html">..........click Here..........</a>
+        </div>
+        <div class="column">
+            <a href="java.html">..........click Here............</a>
+        </div>
+        <div class="column">
+            <a href="python.html">..........click Here............</a>
+        </div>
+    </div>
 </body>
 </body>
 </html>
