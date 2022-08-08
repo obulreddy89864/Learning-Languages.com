@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background:url(business.jpg) no-repeat;
+    background-size: cover;
+}
+
+.signup-form
+{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+}
+
+.signup-form h1
+{
+    float: left;
+    font-size: 40px;
+    border-bottom: 4px solid #4caf50;
+    margin-bottom: 50px;
+    padding: 13px 0px
+}
+
+.txt
+{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0px;
+    margin: 8px 0px;
+    border-bottom: 1px solid #4caf50;
+}
+
+.txt i
+{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.txt input
+{
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+
+.btn
+{
+    width: 100%;
+    background: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 10px 05px;
+    cursor: pointer;
+    font-size: 14px;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Signup Form Using HTML and CSS3</title>
+</head>
+<body>
+    <div class="signup-form">
+        <h1> Signup Form </h1>
+        <div class="txt">
+            <form action="process.php" method="POST">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="UserName" name="UName">
+        </div>
+        <div class="txt">
+                <i class="fa fa-envelope"></i>
+                <input type="email" placeholder="Email" name="Email">
+        </div>
+        <div class="txt">
+                <i class="fa fa-lock"></i>
+                <input type="password" placeholder="Password" name="Password">
+        </div>
+        <div class="txt">
+                <i class="fa fa-lock"></i>
+                <input type="password" placeholder="Confirm Password" name="CPassword">
+        </div>
+            <button class="btn" name="btn"> Signup </button>
+        </form>
+    </div>
+</body>
+</html>
