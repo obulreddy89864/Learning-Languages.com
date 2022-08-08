@@ -195,6 +195,8 @@ span.psw {
       <input type="password" placeholder="Enter Password" name="psw" id="text2"required>
         
       <button type="button"onclick ="javascript:validate()">Login</button>
+      <p>Registration for Normal people</p>
+      <button type="button"onclick ="register()">Register</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -206,6 +208,12 @@ span.psw {
     </div>
   </form>
 </div>
+<script>
+  function register()
+  {
+    location.href="register.html"
+  }
+</script>
 <script type="text/javascript">
     function validate()
     {
