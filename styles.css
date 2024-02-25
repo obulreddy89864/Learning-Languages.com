@@ -1,7 +1,4 @@
-body{
-    font-family: 'poppins';
-    font-size: 22px
-}
+
 
 .sidebar {
     font-family: 'Fredoka';
@@ -243,6 +240,7 @@ body{
 
 /* Mobile menu styles */
 @media screen and (max-width: 768px) {
+
     .sidebar {
         display: none;
     }
@@ -304,6 +302,5 @@ body{
     }
 }
 /*pop up contents*/
-
 
 
