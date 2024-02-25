@@ -1,4 +1,4 @@
-
+    
 .post-widget {
   background: #fff;
   margin: 0px;
@@ -160,20 +160,16 @@
 }
 
 @media screen and (max-width: 768px) {
-  body {
-      background: #fefefe;
-      font-family: 'Roboto', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      overflow-x: hidden;
-    }
+  html, body {
+    margin: 0;
+    overflow-x: hidden !important;
+  }
   .post-widget {
       width: 100vw; /* Use viewport width to cover the entire screen width */
       margin: 0; /* Remove any margin */
       max-width: none; /* Remove max-width */
-      
+      margin-left: -16px; /* Add this line */
+
       }
   .header{
       margin-bottom: 0px;
