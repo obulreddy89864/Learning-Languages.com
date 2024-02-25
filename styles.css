@@ -1,0 +1,309 @@
+body{
+    font-family: 'poppins';
+    font-size: 22px
+}
+
+.sidebar {
+    font-family: 'Fredoka';
+    font-weight: 470;
+    z-index: 999;
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding-top: 20px;
+    border-right: 1px solid #e0e0e0;
+    overflow: hidden;
+    user-select: none;
+    transition: all 0.5s;
+}
+
+.sidebar-hidden {
+    width: 108px;
+    transition: all 0.5s;
+    
+}
+
+
+.sidebar-hidden .navbar a i {
+    font-size: 28px;
+    margin-left: 15px;
+    margin-right: 5px; 
+}
+
+
+
+.sidebar:hover {
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+
+.sidebar .navbar a span {
+    display: inline-block;
+    transition: all 0.5s;
+
+}
+
+.sidebar .navbar a.hidden span {
+    display: none;
+    transition: all 0.5s;
+}
+
+/* Add styles to show the text when the sidebar is not hidden */
+.sidebar:not(.sidebar-hidden) .navbar a.hidden span {
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+
+
+/* Style for the fixed scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+/* Style for the track (background) of the scrollbar */
+.sidebar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.space {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .company-name {
+    color: #000;
+    font-size: 24px;
+    font-family: 'Pacifico', cursive;
+    margin-left: 5px;
+    margin-right: 10px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 2px 2px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.5s;
+}
+.top-bar .company-name-screen-less{
+    display: none;
+}
+.top-bar .material-symbols-rounded {
+    font-size: 34px;
+    color: #000;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 0px;
+    cursor: pointer;
+    user-select: none;
+}
+.top-bar .t2-icon .material-symbols-rounded{
+    display: none;
+}
+.top-bar .material-symbols-rounded:hover {
+    background-color: #F5F5F5;
+    border-radius: 50px;
+    color: #000;
+    transition: all ease-in-out 0.5s;
+}
+
+
+.top-bar .notifications-icon{
+    position: absolute;
+    right: 185px;
+    display: flex;
+    align-items: center;
+    
+}
+.top-bar .add-icon {
+    position: absolute;
+    right: 275px;
+    display: flex;
+    align-items: center;
+}
+.top-bar .settings-icon {
+    position: absolute;
+    right: 230px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.top-bar .profile-section {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    transition: all ease-in 0.5s;
+}
+
+.top-bar .profile-section img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: all ease-in 0.5s;
+}
+
+.top-bar .profile-section .profile-name {
+    color: #000;
+    font-size: 20px;
+    font-family: 'Fredoka';
+    font-weight: 500;
+    margin-right: 10px;
+    transition: all ease-in 0.5s;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    border-right: 10px solid #fff;
+    
+}
+.navbar a:hover {
+    background-color: #F5F5F5;
+    border-right-color: #F5F5F5;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px; 
+    
+}
+
+
+.navbar a.active {
+    background-color: #E7F7FF;
+    border-right-color: #E7F7FF;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 2px 2px 2px #c0c0c0;
+}
+.sidebar .navbar .material-symbols-rounded {
+    font-size: 37px;
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+
+
+
+.content {
+    margin-left: 350px;
+    margin-top: 70px;
+    padding: 16px;
+    transition: margin-left 0.5s;
+}
+.content.collapsed {
+    margin-left: 108px;
+    transition: margin-left 0.5s;
+}
+
+
+/* Mobile menu styles */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .top-bar .material-symbols-rounded {
+        font-size: 24px;
+        margin-left: 5px;
+        margin-right: 0px;
+    }
+    .top-bar .t-icon .material-symbols-rounded{
+        display: none;
+    }
+    .top-bar .t2-icon .material-symbols-rounded{
+        display: block;
+    }
+
+    .content {
+        margin-left: 0px;
+    }
+    .content.collapsed {
+        margin-left: 0; /* Set margin-left to 0px for smaller screens when collapsed */
+    }
+
+    .top-bar .company-name {
+        display: none;
+    }
+    .top-bar .company-name-screen-less{
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all ease-out 0.5s;
+    }
+
+    .profile-section {
+        display: none;
+    }
+    .top-bar .notifications-icon{
+        font-size: 24px;
+        right: 0;
+        transition: all ease-out 0.5s;
+    }
+    .top-bar .settings-icon {
+        font-size: 24px;
+        right: 36px;
+        transition: all ease-out 0.5s;
+        
+    }
+    .top-bar .add-icon {
+        font-size: 24px;
+        right: 72px;
+        transition: all ease-out 0.5s;
+    }
+
+    .profile-section img {
+        display: none;
+    }
+
+    .profile-section .profile-name {
+        display: none;
+    }
+}
+/*pop up contents*/
+
+
+

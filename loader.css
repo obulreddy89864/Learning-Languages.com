@@ -1,0 +1,33 @@
+/* Styles for the loader */
+.loader {
+  position: fixed;
+  top: 50px; /* Adjust the top position to the height of your top-bar */
+  left: 0;
+  width: 100%;
+  height: 6px; /* Adjust the height of the loader bar */
+  background: linear-gradient(to right, #3498db, #ffffff); /* Gradient with two colors */
+  display: none; /* Initially hide the loader */
+  z-index: 9999; /* Ensure it's on top of other elements */
+  transition: height 0.5s; /* Add a smooth transition effect */
+}
+
+body.loading .loader {
+  height: 100%; /* Expand the loader to full height when loading */
+}
+
+/* Styles for the content loader */
+.loader-content {
+  position: fixed;
+  top: 65px; /* Adjust the top position to the height of your top-bar */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Adjust the height of the loader bar */
+  background: linear-gradient(to right, #3498db, #ffffff); /* Gradient with two colors */
+  display: none; /* Initially hide the loader */
+  z-index: 9999; /* Ensure it's on top of other elements */
+  transition: height 0.5s; /* Add a smooth transition effect */
+}
+
+body.loading .loader-content {
+  height: 100%; /* Expand the loader to full height when loading */
+}
