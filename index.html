@@ -1,158 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Start of Async Drift Code -->
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('v4x3ue77m89k');
-</script>
-<!-- End of Async Drift Code -->
-        <script>
-            function getddl()
-            {
-                document.getElementById('iblmess').innerHTML=("The selected option is :<b style='color.red;'>"+formid.ddlselect[formid.ddlselect.selectedIndex].text+'</b>')
-            }
-        </script>    
-        <title>Learning-Languages</title>
-        <style>
-            body {background-color: #ddd;}
-            h2   {
-                color: black;
-                font-size: 40px;
-            }
-            p    {
-                color: black;
-                font-style: italic;
-                font-size: 20px;
-            }
-        </style>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="view port" content="width-device-width, initial-scale=1.0">
-    <title>programming languages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="off-canvas.css">
+    <link rel="stylesheet" href="post.css">
+    <script src="https://kit.fontawesome.com/6434908659.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <title>ASCUBE</title>
 </head>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-    }
-    
-    .topnav a {
-      float: left;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-    
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-    
-    .topnav a.active {
-      background-color: #04AA6D;
-      color: white;
-    }
-    </style>
-    </head>
-    <body>
-    
-    <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
-      <a href="login.html">Login</a>
-    </div>
-    
-    <div style="padding-left:16px">
-      <h2>All Languages In One</h2>
-    </div>
-    
-    </body>
+
 <body>
-    ->Select here:
-    <select name="links" id="" size="1" onchange="window.location.href=this.value;">
-        <option value="hello.html">C</option>
-        <option value="cpp.html">CPP</option>
-        <option value="java.html">Java</option>
-        <option value="python.html">Python</option>
-        <option value="index.html">PHP</option>
-        <option value="index.html">HTML</option>
-        <option value="index.html">CSS</option>
-        <option value="index.html">JavaScript</option>
-        <option vaiue="index.html" selected>--select--</option>
-    </select>
-<label id="iblmess"></label>
-<body>
+    <div class="top-bar">
+        <div class="t-icon"><i class="material-symbols-rounded" id="sidebarToggle">menu</i></div>
+        <div class="t2-icon"><i class="material-symbols-rounded" onclick="openNav()">menu</i></div>
+
+        <div class="company-name">
+            AS CUBE
+        </div>
+        <div class="company-name-screen-less">
+            AS<sup>3</sup>
+        </div>
+
+        <div class="notifications-icon">
+            <i class="material-symbols-rounded">notifications</i>
+        </div>
+        <div class="add-icon">
+            <i class="material-symbols-rounded">add</i>
+        </div>
+
+        <div class="settings-icon">
+            <i class="material-symbols-rounded">settings</i>
+        </div>
+
+
         
-    <p>--> you can learn any language by this site<br></p>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        .column {
-            float: left;
-            width: 33.33;
-            padding: 5px;
-        }
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-    </style>
-    <div class="row">
-        <div class="column">
-            <img src="c-logo.jpg" alt="c" style="width:150px;height:150px;">
-        </div>
-        <div class="column">
-            <img src="CPP-logo.jpg" alt="CPP" style="width:150px;height:150px;">
-        </div>
-        <div class="column">
-            <img src="java.jpg" alt="JS" style="width:150px;height:150px;">
-        </div>
-        <div class="column">
-            <img src="python.jpg" alt="JS" style="width:150px;height:150px;">
-        </div>
-        <div class="column">
-            <img src="html.jpg" alt="JS" style="width:150px;height:150px;">
-        </div>
-        <div class="column">
-            <img src="css.jpg" alt="JS" style="width:150px;height:150px;">
+        <div class="profile-section">
+            <img src="1.jpg" alt="Profile Image">
+            <div class="profile-name">Your Name</div>
         </div>
     </div>
-</body>
+    
+    <div class="loader"></div>
+        
+    <!-- SideBar -->
+    <div class="sidebar" id="sidebar">
+        <div class="space">
+            <h3></h3> <!-- Add your company name here -->
+        </div>
+
+        <nav class="navbar ">
+            <a class="active" href="#" id="home-space"><i class="material-symbols-rounded">home</i><span>Home</span></a>
+            <a href="#" id="searchIcon"><i class="material-symbols-rounded">search</i><span>Search</span></a>
+            <a href="#"><i class="material-symbols-rounded">chat_bubble</i><span>Chat</span></a>
+            <a href="#"><i class="material-symbols-rounded">image</i><span>Images</span></a>
+            <a href="#"><i class="material-symbols-rounded">videocam</i><span>Videos</a>
+            <a href="#"><i class="material-symbols-rounded">folder_open</i><span>Files</span></a>
+            <a href="#"><i class="material-symbols-rounded">bookmark</i><span>Saved</span></a>
+            <a href="#"><i class="material-symbols-rounded">person</i><span>Profile</span></a>
+            <a href="#"><i class="material-symbols-rounded">logout</i><span>Logout</span></a>
+
+            <br>
+        </nav>
+    </div>
+    <!--off-canvas menu-->
+    <div id="mySidenav" class="sidenav">
+        <h4>ASCUBE</h4>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-symbols-rounded">close</i></a>
+      <hr>
+      <a class="active" href="#"><i class="material-symbols-rounded">home</i><span>Home</span></a>
+      <a href="#"><i class="material-symbols-rounded">search</i><span>Search</span></a>
+      <a href="#"><i class="material-symbols-rounded">chat_bubble</i><span>Chat</span></a>
+      <a href="#"><i class="material-symbols-rounded">image</i><span>Images</span></a>
+      <a href="#"><i class="material-symbols-rounded">videocam</i><span>Videos</a>
+      <a href="#"><i class="material-symbols-rounded">folder_open</i><span>Files</span></a>
+      <a href="#"><i class="material-symbols-rounded">bookmark</i><span>Saved</span></a>
+      <a href="#"><i class="material-symbols-rounded">person</i><span>Profile</span></a>
+      <a href="#" class="logout-space"><i class="material-symbols-rounded">logout</i><span>Logout</span></a>
+    
+    </div>
+    <!-- Main Content -->
+    <div class="content" id="content">
+        <div class="loader-content"></div>
+        <div class="post-widget">
+            <div class="header">
+              <img class="profile-photo" src="abc.avif" alt="Profile Photo">
+              <div class="username">Username</div>
+              <div class="more-options"><i class="material-symbols-rounded">more_horiz</i></div>
+            </div>
+            <div class="slider-nav">
+                <i class="material-symbols-rounded slider-nav-icon left-icon">arrow_back</i>
+                <i class="material-symbols-rounded slider-nav-icon right-icon">arrow_forward</i>
+            </div>
+            <div class="image-slider" id="image-slider">
+                <!-- Images will be dynamically loaded here -->
+              </div>
+            <div class="post-actions">
+                <div class="action love">
+                    <i class="material-symbols-rounded">favorite</i>
+                </div>
+                <div class="action comment">
+                    <i class="fa-regular fa-comment fa-flip-horizontal"></i>
+                </div>
+                <div class="action share" >
+                    <i class="material-symbols-rounded">send</i>
+                </div>
+                <div class="action bookmark"  id="bookmark">
+                    <i class="material-symbols-rounded">bookmark</i>
+                </div>
+            </div>
+            <div class="description">Short description goes here...</div>
+        </div> 
+    </div>
+
+
+
+    
+    <script src="loader.js"></script>
+    <script src="script.js"></script>
+    <script src="post.js"></script>
+   
 </body>
 </html>
