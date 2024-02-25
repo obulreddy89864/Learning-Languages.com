@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="loader.css">
     <link rel="stylesheet" href="off-canvas.css">
     <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="bottom-menu.css">
     <script src="https://kit.fontawesome.com/6434908659.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
@@ -86,9 +87,49 @@
       <a href="#" class="logout-space"><i class="material-symbols-rounded">logout</i><span>Logout</span></a>
     </div>
     <div id="overlay"></div>
+    <!--BOTTOM MOBILE MENU-->
+    <!-- Bottom Fixed Mobile Menu -->
+    <div class="bottom-fixed-mobile-menu" id="bottomFixedMobileMenu">
+        <a href="#" class="bottom-menu-item active"><i class="material-symbols-rounded">home</i></a>
+        <a href="#" class="bottom-menu-item"><i class="material-symbols-rounded">search</i></a>
+        <a href="#" class="bottom-menu-item"><i class="material-symbols-rounded">add</i></a>
+        <a href="#" class="bottom-menu-item"><i class="material-symbols-rounded">chat_bubble</i></a>
+        <a href="#" class="bottom-menu-item"><i class="material-symbols-rounded">person</i></a>
+    </div>
+
     <!-- Main Content -->
     <div class="content" id="content">
         <div class="loader-content"></div>
+        <div class="post-widget">
+            <div class="header">
+              <img class="profile-photo" src="abc.avif" alt="Profile Photo">
+              <div class="username">Username</div>
+              <div class="more-options"><i class="material-symbols-rounded">more_horiz</i></div>
+            </div>
+            <div class="slider-nav">
+                <i class="material-symbols-rounded slider-nav-icon left-icon">arrow_back</i>
+                <i class="material-symbols-rounded slider-nav-icon right-icon">arrow_forward</i>
+            </div>
+            <div class="image-slider" id="image-slider">
+                <!-- Images will be dynamically loaded here -->
+              </div>
+            <div class="post-actions">
+                <div class="action love">
+                    <i class="material-symbols-rounded">favorite</i>
+                </div>
+                <div class="action comment">
+                    <i class="fa-regular fa-comment fa-flip-horizontal"></i>
+                </div>
+                <div class="action share" >
+                    <i class="material-symbols-rounded">send</i>
+                </div>
+                <div class="action bookmark"  id="bookmark">
+                    <i class="material-symbols-rounded">bookmark</i>
+                </div>
+            </div>
+            <div class="description">Short description goes here...</div>
+        </div>
+<br>
         <div class="post-widget">
             <div class="header">
               <img class="profile-photo" src="abc.avif" alt="Profile Photo">
@@ -126,6 +167,7 @@
     <script src="loader.js"></script>
     <script src="script.js"></script>
     <script src="post.js"></script>
+    <script src="mobilemenu.js"></script>
     
    
 </body>
