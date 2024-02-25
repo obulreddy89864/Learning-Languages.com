@@ -20,7 +20,7 @@
 <body>
     <div class="top-bar">
         <div class="t-icon"><i class="material-symbols-rounded" id="sidebarToggle">menu</i></div>
-        <div class="t2-icon"><i class="material-symbols-rounded" onclick="openNav()">menu</i></div>
+        <a href="#" id="openBtn"><i class="material-symbols-rounded">menu</i></a>
 
         <div class="company-name">
             AS CUBE
@@ -73,7 +73,7 @@
     <!--off-canvas menu-->
     <div id="mySidenav" class="sidenav">
         <h4>ASCUBE</h4>
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-symbols-rounded">close</i></a>
+        <a href="javascript:void(0)" class="closebtn" id="closeBtn" onclick="closeNav()"><i class="material-symbols-rounded">close</i></a>
       <hr>
       <a class="active" href="#"><i class="material-symbols-rounded">home</i><span>Home</span></a>
       <a href="#"><i class="material-symbols-rounded">search</i><span>Search</span></a>
@@ -84,8 +84,8 @@
       <a href="#"><i class="material-symbols-rounded">bookmark</i><span>Saved</span></a>
       <a href="#"><i class="material-symbols-rounded">person</i><span>Profile</span></a>
       <a href="#" class="logout-space"><i class="material-symbols-rounded">logout</i><span>Logout</span></a>
-    
     </div>
+    <div id="overlay"></div>
     <!-- Main Content -->
     <div class="content" id="content">
         <div class="loader-content"></div>
@@ -117,15 +117,16 @@
                 </div>
             </div>
             <div class="description">Short description goes here...</div>
-        </div> 
+        </div>
+        
     </div>
 
 
 
-    
     <script src="loader.js"></script>
     <script src="script.js"></script>
     <script src="post.js"></script>
+    
    
 </body>
 </html>
