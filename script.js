@@ -54,13 +54,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //off-canvas menu
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
+
+function closeNav() {
+    var sideNav = document.getElementById("mySidenav");
+    var overlay = document.getElementById("overlay");
+    sideNav.style.width = "0";
+    overlay.style.display = "none";
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var openBtn = document.getElementById("openBtn");
+    var closeBtn = document.getElementById("closeBtn");
+    var sideNav = document.getElementById("mySidenav");
+    var overlay = document.getElementById("overlay");
+
+    function openNav() {
+        sideNav.style.width = "250px";
+        overlay.style.display = "block";
+    }
+
+    if (openBtn) {
+        openBtn.addEventListener("click", openNav);
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeNav);
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", closeNav);
+    }
+});
+
+
+
+
 
 //post
 
