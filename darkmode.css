@@ -1,0 +1,100 @@
+body.dark-theme {
+    background-color: #18191A;
+    color: #E4E6EA;
+    overflow: auto;
+}
+
+body.dark-theme .lsidebar{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-right: 1px solid #333;
+}
+
+body.dark-theme .rsidebar{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-left: 1px solid #333;
+}
+body.dark-theme .topbar{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-bottom: 1px solid #333;
+}
+body.dark-theme .lsidebar::-webkit-scrollbar-thumb{
+    background-color: #9b9b9b;
+}
+body.dark-theme .digital-clock{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-bottom: 1px solid #333;
+}
+body.dark-theme .lsidebar::-webkit-scrollbar-thumb:hover{
+    background-color: #666668;
+}
+body.dark-theme .elements a {
+    color: #E4E6EA;
+    border-right-color: #18191A;
+    background-color: #18191A;
+}
+
+body.dark-theme .elements a:hover {
+    background-color: #2a2a2a;
+    border-right-color: #2a2a2a;
+}
+
+body.dark-theme .elements a.active {
+    background-color: #333333;
+    border-right-color: #333333;
+}
+body.dark-theme .topbar.scrolled {
+    background-color: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 2px 2px rgba(51, 51, 51, 0.1);
+    transition: background-color 0.3s ease;
+}
+body.dark-theme .sidenav{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-right: 1px solid #333;
+}
+body.dark-theme .sidenav a{
+    color: #E4E6EA;
+    border-right-color: #18191A;
+    background-color: #18191A;
+}
+body.dark-theme .sidenav a:hover{
+    background-color: #2a2a2a;
+    border-right-color: #2a2a2a;
+}
+body.dark-theme .sidenav a.active{
+    background-color: #333333;
+    border-right-color: #333333;
+}
+body.dark-theme .sidenav .material-symbols-rounded{
+    color: #E4E6EA;
+}
+body.dark-theme .topbar .t2-icon .material-symbols-rounded{
+    color: #E4E6EA;
+}
+body.dark-theme .dm-mode i{
+    color: #E4E6EA;
+}
+body.dark-theme .post-widget{
+    background-color: #18191A;
+    color: #E4E6EA;
+}
+body.dark-theme .post-content img{
+    border: 1px solid #333;
+}
+body.dark-theme .post-content video{
+    border: 1px solid #333;
+}
+body.dark-theme .action i{
+    color: #E4E6EA;
+}
+body.dark-theme .bottom-fixed-mobile-menu{
+    background-color: #18191A;
+}
+body.dark-theme .bottom-fixed-mobile-menu a{
+    color: #E4E6EA;
+}
