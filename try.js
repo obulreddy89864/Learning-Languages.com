@@ -133,7 +133,23 @@ function updateDigitalClock() {
   updateDigitalClock();
 //calender
   //scollbar rsidebar
+//close
+let currentPostWidget; // Declare a variable to store the current postWidget
 
+function closePopup() {
+    if (!currentPostWidget) {
+        return; // If postWidget is not defined, do nothing
+    }
+
+    const popupContainer = currentPostWidget.querySelector('.popup-container');
+    const popupMedia = currentPostWidget.querySelector('.popup-media');
+
+    // Clear the media source
+    popupMedia.innerHTML = '';
+
+    // Hide the popup
+    popupContainer.style.display = 'none';
+}
 //post
 function initializePostWidget(postWidget) {
             const sliderContainer = postWidget.querySelector('.slider-container');
@@ -142,11 +158,18 @@ function initializePostWidget(postWidget) {
             const sliderCounter = postWidget.querySelector('.slider-counter');
             const prevArrow = postWidget.querySelector('.slider-prev');
             const nextArrow = postWidget.querySelector('.slider-next');
-        
             let currentIndex = 0;
             let touchStartX = 0;
             let touchEndX = 0;
+            currentPostWidget = postWidget; // Set the current postWidget
+
+            // Your existing code for post initialization
         
+            // Attach click event listener to the close button if found
+            const closeButtonElement = postWidget.querySelector('.close-button');
+            if (closeButtonElement) {
+                closeButtonElement.addEventListener('click', closePopup);
+            }
             function showMedia(index) {
                 mediaElements.forEach((element, i) => {
                     if (i === index) {
@@ -380,57 +403,58 @@ function initializePostWidget(postWidget) {
 
 //mobile-menu .js
 document.addEventListener('DOMContentLoaded', function () {
-    // ... existing script code ...
+        // ... existing script code ...
 
-    var bottomFixedMobileMenu = document.getElementById("bottomFixedMobileMenu");
+        var bottomFixedMobileMenu = document.getElementById("bottomFixedMobileMenu");
 
-    function handleBottomMenuVisibility() {
-        if (window.innerWidth < 768) {
-            bottomFixedMobileMenu.style.display = "flex";
-        } else {
-            bottomFixedMobileMenu.style.display = "none";
-        }
-    }
-
-    // Call the function on page load
-    handleBottomMenuVisibility();
-
-    // Update visibility on window resize
-    window.addEventListener('resize', handleBottomMenuVisibility);
-
-    // ... rest of your script ...
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // ... existing script code ...
-
-    var bottomFixedMobileMenu = document.getElementById("bottomFixedMobileMenu");
-    var lastScrollPosition = window.scrollY;
-
-    function handleBottomMenuVisibility() {
-        if (window.innerWidth < 768) {
-            var currentScrollPosition = window.scrollY;
-
-            if (currentScrollPosition > lastScrollPosition) {
-                // Scrolling down
-                bottomFixedMobileMenu.style.transform = "translateY(100%)";
+        function handleBottomMenuVisibility() {
+            if (window.innerWidth < 768) {
+                bottomFixedMobileMenu.style.display = "flex";
             } else {
-                // Scrolling up
-                bottomFixedMobileMenu.style.transform = "translateY(0)";
+                bottomFixedMobileMenu.style.display = "none";
             }
-
-            lastScrollPosition = currentScrollPosition;
         }
-    }
 
-    // Call the function on page load
-    handleBottomMenuVisibility();
+        // Call the function on page load
+        handleBottomMenuVisibility();
 
-    // Update visibility on window resize
-    window.addEventListener('resize', handleBottomMenuVisibility);
+        // Update visibility on window resize
+        window.addEventListener('resize', handleBottomMenuVisibility);
 
-    // Update visibility on scroll
-    window.addEventListener('scroll', handleBottomMenuVisibility);
+        // ... rest of your script ...
+    });
 
-    // ... rest of your script ...
-});
+    document.addEventListener('DOMContentLoaded', function () {
+        // ... existing script code ...
+    
+        var bottomFixedMobileMenu = document.getElementById("bottomFixedMobileMenu");
+        var lastScrollPosition = window.scrollY;
+    
+        function handleBottomMenuVisibility() {
+            if (window.innerWidth < 768) {
+                var currentScrollPosition = window.scrollY;
+    
+                if (currentScrollPosition > lastScrollPosition) {
+                    // Scrolling down
+                    bottomFixedMobileMenu.style.transform = "translateY(100%)";
+                } else {
+                    // Scrolling up
+                    bottomFixedMobileMenu.style.transform = "translateY(0)";
+                }
+    
+                lastScrollPosition = currentScrollPosition;
+            }
+        }
+    
+        // Call the function on page load
+        handleBottomMenuVisibility();
+    
+        // Update visibility on window resize
+        window.addEventListener('resize', handleBottomMenuVisibility);
+    
+        // Update visibility on scroll
+        window.addEventListener('scroll', handleBottomMenuVisibility);
+    
+        // ... rest of your script ...
+    });
+    
