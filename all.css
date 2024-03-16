@@ -1,0 +1,652 @@
+body.dark-theme {
+    background-color: #18191A;
+    color: #E4E6EA;
+    overflow: auto;
+}
+body.dark-theme .lsidebar{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-right: 1px solid #333;
+}
+body.dark-theme .topbar{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-bottom: 1px solid #333;
+}
+body.dark-theme .elements a {
+    color: #E4E6EA;
+    border-right-color: #18191A;
+    background-color: #18191A;
+}
+
+body.dark-theme .elements a:hover {
+    background-color: #2a2a2a;
+    border-right-color: #2a2a2a;
+}
+
+body.dark-theme .elements a.active {
+    background-color: #333333;
+    border-right-color: #333333;
+}
+body.dark-theme .topbar.scrolled {
+    background-color: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 2px #333A42;
+    transition: background-color 0.3s ease;
+}
+body.dark-theme .topbar .t2-icon .material-symbols-rounded{
+    color: #E4E6EA;
+    font-size: 24px;
+}
+body.dark-theme .rsidebar{
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-left-color: #333;
+}
+body.dark-theme .digital-clock {
+    background-color: #18191A;
+    color: #E4E6EA;
+    border-bottom-color: #333;
+}
+body.dark-theme .overlay{
+    background: #333A42;
+}
+body.dark-theme .post-widget{
+    background-color: #18191A;
+    color: #E4E6EA;
+}
+body.dark-theme .post-content img{
+    border: 1px solid #333;
+}
+body.dark-theme .post-content video{
+    border: 1px solid #333;
+}
+body.dark-theme .action i{
+    color: #E4E6EA;
+}
+body.dark-theme .bottom-fixed-mobile-menu{
+    background-color: #18191A;
+}
+body.dark-theme .bottom-fixed-mobile-menu a{
+    color: #E4E6EA;
+}
+.lsidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    z-index: 1001;
+    overflow: hidden;
+    overflow-y: auto;
+    user-select: none;
+    padding-top: 20px;
+    background-color: #fefefe;
+    border-right: 1px solid #e0e0e0;
+    font-family: "Fredoka";
+    font-weight: 500;
+  }
+  
+  .wish {
+    font-family: "Fredoka";
+    font-weight: 500;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    font-size: 24px;
+    z-index: 3;
+    user-select: none;
+    
+  }
+  
+  /* other styles */
+.lsidebar::-webkit-scrollbar {
+    width: 15px;
+    background-color: transparent;
+}
+.lsidebar::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+.lsidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+.lsidebar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/*elements*/
+.elements {
+    display: flex;
+    flex-direction: column;
+}
+.elements a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-right: 3px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    border-right: 10px solid #fff;
+}
+.elements .space-top{
+    margin-top: 50px;
+}
+.elements .space-bottom{
+    margin-bottom: 30px;
+}
+.elements a i {
+    font-size: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+.elements a:hover {
+    background-color: #E7E7E8;
+    border-right-color: #E7E7E8;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 2px 2px 2px #c0c0c0;
+}
+.elements a.active {
+    background-color: #E7F7FF;
+    border-right-color: #E7F7FF;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 2px 2px 2px #c0c0c0;
+}
+.lsidebar .elements .material-symbols-rounded {
+    font-size: 37px;
+    margin-right: 12px;
+    font-weight: 500
+}
+
+/*loading animation*/
+.content{
+    font-family: 'fredoka';
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 60px;
+    font-family: 400;
+    font-size: 18px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333A42; /* Semi-transparent black */
+    z-index: 1; /* Ensure overlay is above other content except for sidebar */
+    display: none; /* Initially hidden */
+}
+.post-widget {
+    background-color: #fff;
+    position: relative;
+    max-width: 470px;
+    margin: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    margin-bottom: -10px;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  .user-profile img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-right: 0px;
+    margin-left: 0px;
+    user-select: none;
+  }
+  .username {
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: auto;
+    font-family: 'Fredoka';
+    user-select: none;
+  }
+  .more-options{
+    cursor: pointer;
+    font-size: 5px;
+  }
+  .more-options .material-symbols-rounded{
+    font-size: 26px;
+    user-select: none;
+  }
+  
+  /* Style for the post content (image or video) */
+  .post-content img {
+    width: 100%;
+    display: none;
+    border-radius: 4px;
+    user-select: none;
+    border: 1px solid #c0c0c0;
+    box-sizing: border-box;
+  }
+  .post-content video {
+    width: 100%;
+    display: none;
+    border-radius: 4px;
+    user-select: none;
+    border: 1px solid #c0c0c0;
+    box-sizing: border-box;
+  }
+  
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .slider-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+    transition: opacity 0.5s ease-in-out; /* Add transition for smooth slide */
+  }
+  
+  .slider-container img:first-child {
+    display: block;
+  }
+  .slider-counter {
+    position: absolute;
+    font-size: 18px;
+    font-family: 'Fredoka';
+    font-weight: 470;
+    top: 10px;
+    right: 10px;
+    background-color: grey;
+    color: #fff;
+    padding: 6px;
+    border-radius: 40px;
+  }
+
+  .slider-icons .material-symbols-rounded {
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #fff; /* Background color for the circular shape */
+    color: #000; /* Icon color */
+    border-radius: 50%; /* Make it circular */
+    padding: 0px; /* Adjust padding for better spacing */
+    user-select: none;
+}
+  .slider-prev,
+  .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .slider-prev {
+    left: 10px;
+  }
+  
+  .slider-next {
+    right: 10px;
+  }
+  .post-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: relative;
+}
+.action {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.action i{
+    font-size: 26px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 7px;
+    margin-right: -7px;
+    user-select: none;
+}
+.action .material-symbols-rounded {
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: -10px;
+    margin-top: 7px;
+    user-select: none;
+    
+}
+.action.comment {
+    font-size: 25px;
+    margin-top: 0px;
+    color: #000;
+  }
+  
+.action.share  {
+    font-size: 25px;
+    margin-top: 0px;
+    color: #000;
+}
+.action.share .material-symbols-rounded{
+    font-size: 33px;
+    margin-right: -10px;
+    margin-top: 0px;
+    transform: rotate(320deg);
+}
+.action.bookmark {
+    margin-right: 10px;
+    margin-left: auto;
+    color: #000;
+}
+
+  .post-description {
+    margin-top: 10px;
+    font-size: 17px;
+    font-family: 'Fredoka';
+    font-weight: 400;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+.rsidebar {
+    font-family: "Fredoka";
+    font-weight: 470;
+    z-index: 2;
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    user-select: none;
+    right: 0;
+    background-color: #fff;
+    padding-top: 20px;
+    border-left: 1px solid #e0e0e0;
+  }
+
+  .digital-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    font-size: 55px;
+    font-weight: 600;
+    font-family: 'fredoka';
+    color: #000;
+    border-radius: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 7px;
+  }
+    /* Widget Styles */
+    .birthday-widget {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 20px;
+      }
+      
+      .birthday-widget h2 {
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      
+      .birthday-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .birthday-item {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .birthday-item img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      
+      .birthday-item p {
+        margin: 0;
+        font-size: 16px;
+      }
+      .topbar {
+        position: fixed;
+        top: 0;
+        left: 350px; /* Width of lsidebar */
+        right: 350px; /* Width of rsidbar */
+        height: 60px; /* Adjust the height as needed */
+        background-color: #ffffff; /* Background color for the top bar */
+        z-index: 1; /* Set the z-index to be above lsidebar and below rsidbar */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        border-bottom: 1px solid #e0e0e0;
+        transition: top 0.3s;
+    }
+    
+    .company-name {
+        font-family: 'fredoka';
+        font-size: 34px; /* Adjust the font size as needed */
+        font-weight: 500;
+        flex: 1; /* Add this to make the company name take up remaining space */
+        text-align: center; /* Center the text horizontally */
+        user-select: none;
+    }
+    
+    .icon {
+        font-size: 24px;
+        cursor: pointer; /* Add this to make it look clickable */
+    }
+    .topbar.scrolled {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(7px);
+        box-shadow: 0 2px 2px #e0e0e0;
+        transition: background-color 0.3s ease;
+    }
+    .topbar .t2-icon .material-symbols-rounded{
+        display: none;
+    }
+    .topbar .topbar-icon .dm-mode-1 i {
+        font-size: 32px;
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .bottom-fixed-mobile-menu {
+        display: none;
+        /* Remaining styles... */
+    }
+/* Adjustments for screens less than 1000px */
+@media screen and (max-width: 1300px) {
+    .lsidebar {
+        width: 112px; /* Reduce sidebar width */
+    }
+    .elements a span {
+        display: none; /* Hide span elements */
+    }
+    .elements a {
+        margin-right: 2px; /* Adjust margin */
+    }
+    .lsidebar .elements .material-symbols-rounded {
+        margin-left: 7px; /* Adjust margin */
+        font-weight: 500;
+        font-size: 37px; /* Adjust font size */
+    }
+    .wish {
+        font-size: 14px; /* Adjust font size */
+        margin-left: 0px; /* Adjust margin */
+        left: 10px; /* Adjust position */
+    }
+    .content{
+        margin-left: 112px;
+        margin-right: 0;
+}
+.rsidebar{
+    display: none;
+}
+.topbar{
+    left: 112px;
+    right: 0;
+}
+}
+/* Off-canvas behavior for screens less than 700px */
+@media screen and (max-width: 700px) {
+    .lsidebar {
+        width: 80%; /* Adjust sidebar width as needed */
+        max-width: 320px; /* Set maximum width to maintain responsiveness */
+        transform: translateX(-100%); /* Initially hide sidebar off-canvas */
+        position: fixed; /* Ensure sidebar stays fixed */
+
+        z-index: 100; /* Ensure sidebar is above overlay */
+        transition: right 0.4s;
+        
+    }
+.wish{
+    font-family: "Fredoka";
+    font-weight: 500;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    font-size: 24px;
+    z-index: 3;
+    user-select: none;
+}
+    .lsidebar.open{
+        transform: translateX(0); /* Show sidebar when open */
+    }
+    .overlay.open {
+        display: block;
+    }
+    .elements a span {
+        display: block; /* Hide span elements */
+    }
+
+    .content{
+        margin: 0;
+        margin-top: 65px;
+    }
+    html, body {
+        margin: 0;
+        overflow-x: hidden !important;
+      }
+      .post-widget{
+        width: 100vw;
+        margin: 0;
+        max-width: none;
+      }
+      .action i {
+        font-size: 25px;
+        color: #000;
+        margin-top: 7px;
+      }
+      .action .material-symbols-rounded {
+        font-size: 29px;
+        margin-top: 7px;
+      }
+      .user-profile img{
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+      .topbar{
+        margin: 0;
+        left: 0;
+        right: 0;
+    }
+    .company-name{
+        font-size: 26px;
+    }
+    .menu-icon{
+        display: block;
+        left: 0;
+    }
+    .topbar .t2-icon .material-symbols-rounded{
+        margin: 0;
+        display: block;
+        color: #000;
+        font-size: 26px;
+        cursor: pointer;
+        user-select: none;
+        position: absolute; /* Position the icons absolutely within the topbar */
+        top: 50%; /* Move the top position to the center of the topbar */
+        transform: translateY(-50%); /* Adjust to vertically center the icon */
+        left: 10px; /* Adjust the left position as needed */
+    }
+    .topbar .topbar-icon .dm-mode-1 i {
+        font-size: 26px;
+    }
+    .bottom-fixed-mobile-menu {
+        background-color: #fefefe;
+        transition: all 0.5s;
+        position: fixed;
+        height: 28px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-around;
+        padding: 10px; /* Adjust as needed */
+        z-index: 3;
+    }
+
+    .bottom-fixed-mobile-menu a {
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
+
+    .bottom-fixed-mobile-menu .material-symbols-rounded {
+        font-size: 32px; /* Adjust as needed */
+        margin-bottom: 4px; /* Adjust as needed */
+        margin-left: 0; /* Resetting the left margin */
+        margin-right: 0; /* Resetting the right margin */
+    }
+
+}
+@media screen and (max-width: 385px){
+    .wish{
+        display: none;
+    }
+    .elements .space-top, .elements .space-bottom{
+        margin: 0;
+    }
+    .lsidebar .elements .material-symbols-rounded {
+        font-size: 30px;
+        margin-right: 12px;
+        
+    }
+    .elements a{
+        font-size: 20px;
+    }
+}
