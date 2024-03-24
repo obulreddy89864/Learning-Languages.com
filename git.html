@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Social Network">
+  <script>
+    window.FontAwesomeKitConfig = {"id":20172788,"version":"6.5.1","token":"6434908659","method":"css","baseUrl":"https://ka-f.fontawesome.com","license":"free","asyncLoading":{"enabled":false},"autoA11y":{"enabled":true},"baseUrlKit":"https://kit.fontawesome.com","detectConflictsUntil":null,"iconUploads":{},"minify":{"enabled":true},"v4FontFaceShim":{"enabled":true},"v4shim":{"enabled":true},"v5FontFaceShim":{"enabled":true}};
+    !function(t){"function"==typeof define&&define.amd?define("kit-loader",t):t()}((function(){"use strict";function t(t,e){var n=Object.keys(t);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(t);e&&(r=r.filter((function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),n.push.apply(n,r)}return n}function e(e){for(var n=1;n<arguments.length;n++){var o=null!=arguments[n]?arguments[n]:{};n%2?t(Object(o),!0).forEach((function(t){r(e,t,o[t])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(o)):t(Object(o)).forEach((function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(o,t))}))}return e}function n(t){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t,e,n){return(e=function(t){var e=function(t,e){if("object"!=typeof t||null===t)return t;var n=t[Symbol.toPrimitive];if(void 0!==n){var r=n.call(t,e||"default");if("object"!=typeof r)return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===e?String:Number)(t)}(t,"string");return"symbol"==typeof e?e:String(e)}(e))in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}function o(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){var n=null==t?null:"undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null!=n){var r,o,i,a,c=[],u=!0,f=!1;try{if(i=(n=n.call(t)).next,0===e){if(Object(n)!==n)return;u=!1}else for(;!(u=(r=i.call(n)).done)&&(c.push(r.value),c.length!==e);u=!0);}catch(t){f=!0,o=t}finally{try{if(!u&&null!=n.return&&(a=n.return(),Object(a)!==a))return}finally{if(f)throw o}}return c}}(t,e)||function(t,e){if(!t)return;if("string"==typeof t)return i(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);"Object"===n&&t.constructor&&(n=t.constructor.name);if("Map"===n||"Set"===n)return Array.from(t);if("Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return i(t,e)}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function i(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}var a="sharp",c=["classic","duotone","sharp"],u=["fak","fa-kit","fakd","fa-kit-duotone"],f=["fa","fas","fa-solid","far","fa-regular","fal","fa-light","fat","fa-thin","fad","fa-duotone","fab","fa-brands","fass","fasr","fasl","fast"];function s(t,e){var n=e&&e.addOn||"",r=e&&e.baseFilename||t.license+n,o=e&&e.minify?".min":"",i=e&&e.fileSuffix||t.method,a=e&&e.subdir||t.method;return t.baseUrl+"/releases/"+("latest"===t.version?"latest":"v".concat(t.version))+"/"+a+"/"+r+o+"."+i}function d(t,e){var n=e||["fa"],r="."+Array.prototype.join.call(n,",."),o=t.querySelectorAll(r);Array.prototype.forEach.call(o,(function(e){var n=e.getAttribute("title");e.setAttribute("aria-hidden","true");var r=!e.nextElementSibling||!e.nextElementSibling.classList.contains("sr-only");if(n&&r){var o=t.createElement("span");o.innerHTML=n,o.classList.add("sr-only"),e.parentNode.insertBefore(o,e.nextSibling)}}))}var l,h=function(){},m="undefined"!=typeof global&&void 0!==global.process&&"function"==typeof global.process.emit,p="undefined"==typeof setImmediate?setTimeout:setImmediate,v=[];function b(){for(var t=0;t<v.length;t++)v[t][0](v[t][1]);v=[],l=!1}function y(t,e){v.push([t,e]),l||(l=!0,p(b,0))}function g(t){var e=t.owner,n=e._state,r=e._data,o=t[n],i=t.then;if("function"==typeof o){n="fulfilled";try{r=o(r)}catch(t){O(i,t)}}w(i,r)||("fulfilled"===n&&A(i,r),"rejected"===n&&O(i,r))}function w(t,e){var r;try{if(t===e)throw new TypeError("A promises callback cannot return that same promise.");if(e&&("function"==typeof e||"object"===n(e))){var o=e.then;if("function"==typeof o)return o.call(e,(function(n){r||(r=!0,e===n?S(t,n):A(t,n))}),(function(e){r||(r=!0,O(t,e))})),!0}}catch(e){return r||O(t,e),!0}return!1}function A(t,e){t!==e&&w(t,e)||S(t,e)}function S(t,e){"pending"===t._state&&(t._state="settled",t._data=e,y(E,t))}function O(t,e){"pending"===t._state&&(t._state="settled",t._data=e,y(P,t))}function j(t){t._then=t._then.forEach(g)}function E(t){t._state="fulfilled",j(t)}function P(t){t._state="rejected",j(t),!t._handled&&m&&global.process.emit("unhandledRejection",t._data,t)}function _(t){global.process.emit("rejectionHandled",t)}function F(t){if("function"!=typeof t)throw new TypeError("Promise resolver "+t+" is not a function");if(this instanceof F==!1)throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.");this._then=[],function(t,e){function n(t){O(e,t)}try{t((function(t){A(e,t)}),n)}catch(t){n(t)}}(t,this)}F.prototype={constructor:F,_state:"pending",_then:null,_data:void 0,_handled:!1,then:function(t,e){var n={owner:this,then:new this.constructor(h),fulfilled:t,rejected:e};return!e&&!t||this._handled||(this._handled=!0,"rejected"===this._state&&m&&y(_,this)),"fulfilled"===this._state||"rejected"===this._state?y(g,n):this._then.push(n),n.then},catch:function(t){return this.then(null,t)}},F.all=function(t){if(!Array.isArray(t))throw new TypeError("You must pass an array to Promise.all().");return new F((function(e,n){var r=[],o=0;function i(t){return o++,function(n){r[t]=n,--o||e(r)}}for(var a,c=0;c<t.length;c++)(a=t[c])&&"function"==typeof a.then?a.then(i(c),n):r[c]=a;o||e(r)}))},F.race=function(t){if(!Array.isArray(t))throw new TypeError("You must pass an array to Promise.race().");return new F((function(e,n){for(var r,o=0;o<t.length;o++)(r=t[o])&&"function"==typeof r.then?r.then(e,n):e(r)}))},F.resolve=function(t){return t&&"object"===n(t)&&t.constructor===F?t:new F((function(e){e(t)}))},F.reject=function(t){return new F((function(e,n){n(t)}))};var C="function"==typeof Promise?Promise:F;function I(t,e){var n=e.fetch,r=e.XMLHttpRequest,o=e.token,i=t;return o&&!function(t){return t.indexOf("kit-upload.css")>-1}(t)&&("URLSearchParams"in window?(i=new URL(t)).searchParams.set("token",o):i=i+"?token="+encodeURIComponent(o)),i=i.toString(),new C((function(t,e){if("function"==typeof n)n(i,{mode:"cors",cache:"default"}).then((function(t){if(t.ok)return t.text();throw new Error("")})).then((function(e){t(e)})).catch(e);else if("function"==typeof r){var o=new r;o.addEventListener("loadend",(function(){this.responseText?t(this.responseText):e(new Error(""))}));["abort","error","timeout"].map((function(t){o.addEventListener(t,(function(){e(new Error(""))}))})),o.open("GET",i),o.send()}else{e(new Error(""))}}))}function U(t,e,n){var r=t;return[[/(url\("?)\.\.\/\.\.\/\.\./g,function(t,n){return"".concat(n).concat(e)}],[/(url\("?)\.\.\/webfonts/g,function(t,r){return"".concat(r).concat(e,"/releases/v").concat(n,"/webfonts")}],[/(url\("?)https:\/\/kit-free([^.])*\.fontawesome\.com/g,function(t,n){return"".concat(n).concat(e)}]].forEach((function(t){var e=o(t,2),n=e[0],i=e[1];r=r.replace(n,i)})),r}function k(t,n){var r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:function(){},o=n.document||o,i=d.bind(d,o,[].concat(f,u,c.map((function(t){return"fa-".concat(t)}))));t.autoA11y.enabled&&r(i);var a=t.subsetPath&&t.baseUrl+"/"+t.subsetPath,l=[{id:"fa-main",addOn:void 0,url:a}];if(t.v4shim&&t.v4shim.enabled&&l.push({id:"fa-v4-shims",addOn:"-v4-shims"}),t.v5FontFaceShim&&t.v5FontFaceShim.enabled&&l.push({id:"fa-v5-font-face",addOn:"-v5-font-face"}),t.v4FontFaceShim&&t.v4FontFaceShim.enabled&&l.push({id:"fa-v4-font-face",addOn:"-v4-font-face"}),!a&&t.customIconsCssPath){var h=t.customIconsCssPath.indexOf("kit-upload.css")>-1?t.baseUrlKit:t.baseUrl,m=h+"/"+t.customIconsCssPath;l.push({id:"fa-kit-upload",url:m})}var p=l.map((function(r){return new C((function(o,i){var a=r.url||s(t,{addOn:r.addOn,minify:t.minify.enabled}),c={id:r.id},u=t.subset?c:e(e(e({},n),c),{},{baseUrl:t.baseUrl,version:t.version,id:r.id,contentFilter:function(t,e){return U(t,e.baseUrl,e.version)}});I(a,n).then((function(t){o(T(t,u))})).catch(i)}))}));return C.all(p)}function T(t,e){var n=e.contentFilter||function(t,e){return t},r=document.createElement("style"),o=document.createTextNode(n(t,e));return r.appendChild(o),r.media="all",e.id&&r.setAttribute("id",e.id),e&&e.detectingConflicts&&e.detectionIgnoreAttr&&r.setAttributeNode(document.createAttribute(e.detectionIgnoreAttr)),r}function L(t,n){n.autoA11y=t.autoA11y.enabled,"pro"===t.license&&(n.autoFetchSvg=!0,n.fetchSvgFrom=t.baseUrl+"/releases/"+("latest"===t.version?"latest":"v".concat(t.version))+"/svgs",n.fetchUploadedSvgFrom=t.uploadsUrl);var r=[];return t.v4shim.enabled&&r.push(new C((function(r,o){I(s(t,{addOn:"-v4-shims",minify:t.minify.enabled}),n).then((function(t){r(x(t,e(e({},n),{},{id:"fa-v4-shims"})))})).catch(o)}))),r.push(new C((function(r,o){I(t.subsetPath&&t.baseUrl+"/"+t.subsetPath||s(t,{minify:t.minify.enabled}),n).then((function(t){var o=x(t,e(e({},n),{},{id:"fa-main"}));r(function(t,e){var n=e&&void 0!==e.autoFetchSvg?e.autoFetchSvg:void 0,r=e&&void 0!==e.autoA11y?e.autoA11y:void 0;void 0!==r&&t.setAttribute("data-auto-a11y",r?"true":"false");n&&(t.setAttributeNode(document.createAttribute("data-auto-fetch-svg")),t.setAttribute("data-fetch-svg-from",e.fetchSvgFrom),t.setAttribute("data-fetch-uploaded-svg-from",e.fetchUploadedSvgFrom));return t}(o,n))})).catch(o)}))),C.all(r)}function x(t,e){var n=document.createElement("SCRIPT"),r=document.createTextNode(t);return n.appendChild(r),n.referrerPolicy="strict-origin",e.id&&n.setAttribute("id",e.id),e&&e.detectingConflicts&&e.detectionIgnoreAttr&&n.setAttributeNode(document.createAttribute(e.detectionIgnoreAttr)),n}function M(t){var e,n=[],r=document,o=r.documentElement.doScroll,i=(o?/^loaded|^c/:/^loaded|^i|^c/).test(r.readyState);i||r.addEventListener("DOMContentLoaded",e=function(){for(r.removeEventListener("DOMContentLoaded",e),i=1;e=n.shift();)e()}),i?setTimeout(t,0):n.push(t)}function N(t){"undefined"!=typeof MutationObserver&&new MutationObserver(t).observe(document,{childList:!0,subtree:!0})}try{if(window.FontAwesomeKitConfig){var D=window.FontAwesomeKitConfig,R={detectingConflicts:D.detectConflictsUntil&&new Date<=new Date(D.detectConflictsUntil),detectionIgnoreAttr:"data-fa-detection-ignore",fetch:window.fetch,token:D.token,XMLHttpRequest:window.XMLHttpRequest,document:document},H=document.currentScript,K=H?H.parentElement:document.head;(function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return"js"===t.method?L(t,e):"css"===t.method?k(t,e,(function(t){M(t),N(t)})):void 0})(D,R).then((function(t){t.map((function(t){try{K.insertBefore(t,H?H.nextSibling:null)}catch(e){K.appendChild(t)}})),R.detectingConflicts&&H&&M((function(){H.setAttributeNode(document.createAttribute(R.detectionIgnoreAttr));var t=function(t,e){var n=document.createElement("script");return e&&e.detectionIgnoreAttr&&n.setAttributeNode(document.createAttribute(e.detectionIgnoreAttr)),n.src=s(t,{baseFilename:"conflict-detection",fileSuffix:"js",subdir:"js",minify:t.minify.enabled}),n}(D,R);document.body.appendChild(t)}))})).catch((function(t){console.error("".concat("Font Awesome Kit:"," ").concat(t))}))}}catch(a){console.error("".concat("Font Awesome Kit:"," ").concat(a))}}));
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+  <style>
+    body.dark-theme {
+        background-color: #18191A;
+        color: #E4E6EA;
+        overflow: auto;
+    }
+    body.dark-theme .lsidebar{
+        background-color: #18191A;
+        color: #E4E6EA;
+        border-right: 1px solid #333;
+    }
+    body.dark-theme .topbar{
+        background-color: #18191A;
+        color: #E4E6EA;
+        border-bottom: 1px solid #333;
+    }
+    body.dark-theme .elements a {
+        color: #E4E6EA;
+        border-right-color: #18191A;
+        background-color: #18191A;
+    }
+    
+    body.dark-theme .elements a:hover {
+        background-color: #2a2a2a;
+        border-right-color: #2a2a2a;
+    }
+    
+    body.dark-theme .elements a.active {
+        background-color: #333333;
+        border-right-color: #333333;
+    }
+    body.dark-theme .topbar.scrolled {
+        background-color: rgba(18, 18, 18, 0.7);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 2px 2px #333A42;
+        transition: background-color 0.3s ease;
+    }
+    body.dark-theme .topbar .t2-icon .material-symbols-rounded{
+        color: #E4E6EA;
+        font-size: 24px;
+    }
+    body.dark-theme .rsidebar{
+        background-color: #18191A;
+        color: #E4E6EA;
+        border-left-color: #333;
+    }
+    body.dark-theme .digital-clock {
+        background-color: #18191A;
+        color: #E4E6EA;
+        border-bottom-color: #333;
+    }
+    body.dark-theme .overlay{
+        background: #333A42;
+    }
+    body.dark-theme .post-widget{
+        background-color: #18191A;
+        color: #E4E6EA;
+    }
+    body.dark-theme .post-content img{
+        border: 1px solid #333;
+    }
+    body.dark-theme .post-content video{
+        border: 1px solid #333;
+    }
+    body.dark-theme .action i{
+        color: #E4E6EA;
+    }
+    
+  </style>
+  <style>
+    
+.lsidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    z-index: 1000; /* Increase the z-index to ensure it overlays other content */
+    overflow: hidden;
+    overflow-y: auto;
+    user-select: none;
+    padding-top: 20px;
+    background-color: #fefefe;
+    border-right: 1px solid #e0e0e0;
+    font-family: "Fredoka";
+    font-weight: 500;
+    transition: right 0.4s; 
+  }
+  
+  .wish {
+    font-family: "Fredoka";
+    font-weight: 500;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    font-size: 24px;
+    z-index: 3;
+    user-select: none;
+    
+  }
+  
+  /* other styles */
+.lsidebar::-webkit-scrollbar {
+    width: 15px;
+    background-color: transparent;
+}
+.lsidebar::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+.lsidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+.lsidebar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/*elements*/
+.elements {
+    display: flex;
+    flex-direction: column;
+}
+.elements a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-right: 3px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    border-right: 10px solid #fff;
+}
+.elements .space-top{
+    margin-top: 50px;
+}
+.elements .space-bottom{
+    margin-bottom: 30px;
+}
+.elements a i {
+    font-size: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+.elements a:hover {
+    background-color: #E7E7E8;
+    border-right-color: #E7E7E8;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 2px 2px 2px #c0c0c0;
+}
+.elements a.active {
+    background-color: #E7F7FF;
+    border-right-color: #E7F7FF;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 2px 2px 2px #c0c0c0;
+}
+.lsidebar .elements .material-symbols-rounded {
+    font-size: 37px;
+    margin-right: 12px;
+    font-weight: 500
+}
+
+/*loading animation*/
+.content{
+    font-family: 'fredoka';
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 60px;
+    font-family: 400;
+    font-size: 18px;
+    
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Adjustments for screens less than 1000px */
+@media screen and (max-width: 1300px) {
+    .lsidebar {
+        width: 112px; /* Reduce sidebar width */
+    }
+    .elements a span {
+        display: none; /* Hide span elements */
+    }
+    .elements a {
+        margin-right: 2px; /* Adjust margin */
+    }
+    .lsidebar .elements .material-symbols-rounded {
+        margin-left: 7px; /* Adjust margin */
+        font-weight: 500;
+        font-size: 37px; /* Adjust font size */
+    }
+    .wish {
+        font-size: 14px; /* Adjust font size */
+        margin-left: 0px; /* Adjust margin */
+        left: 10px; /* Adjust position */
+    }
+    .content{
+        margin-left: 112px;
+        margin-right: 0;
+}
+}
+/* Off-canvas behavior for screens less than 700px */
+@media screen and (max-width: 600px) {
+    .lsidebar {
+        width: 100%; /* Adjust sidebar width as needed */ 
+        transform: translateX(-100%); /* Initially hide sidebar off-canvas */
+        position: fixed; /* Ensure sidebar stays fixed */
+        z-index: 1000;
+        transition: right 0.4s;  
+    }
+.wish{
+    font-family: "Fredoka";
+    font-weight: 500;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    font-size: 24px;
+    z-index: 3;
+    user-select: none;
+}
+    .lsidebar.open{
+        transform: translateX(0); /* Show sidebar when open */
+    }
+    .close-btn{
+        display: block;
+    }
+    .elements a span {
+        display: block; /* Hide span elements */
+    }
+
+    .content{
+        margin: 0;
+        margin-top: 45px;
+    }
+}
+@media screen and (max-width: 385px){
+    .wish{
+        display: none;
+    }
+    .elements .space-top{
+        margin-top: 40px;
+    }
+     .elements .space-bottom{
+        margin: 0;
+    }
+    .lsidebar .elements .material-symbols-rounded {
+        font-size: 30px;
+        margin-right: 12px;
+        
+    }
+    .overlay.open {
+        display: block; /* Show the overlay when it has the 'open' class */
+        pointer-events: auto; /* Enable click events on the overlay */
+    }
+    .elements a{
+        font-size: 20px;
+    }
+}
+  </style>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+    .rsidebar {
+        font-family: "Fredoka";
+        font-weight: 470;
+        z-index: 2;
+        height: 100%;
+        width: 350px;
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        user-select: none;
+        right: 0;
+        background-color: #fff;
+        padding-top: 20px;
+        border-left: 1px solid #e0e0e0;
+      }
+    
+      .digital-clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        background-color: #fff;
+        margin-bottom: 20px;
+        font-size: 55px;
+        font-weight: 600;
+        font-family: 'fredoka';
+        color: #000;
+        border-radius: 15px;
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 7px;
+      }
+        /* Widget Styles */
+        .birthday-widget {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+          }
+          
+          .birthday-widget h2 {
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+          
+          .birthday-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .birthday-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+          }
+          
+          .birthday-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+          
+          .birthday-item p {
+            margin: 0;
+            font-size: 16px;
+          }
+      @media screen and (max-width: 1300px){
+        .rsidebar{
+            display: none;
+        }
+      }
+  </style>
+  <style>
+    .post-widget {
+        background-color: #fff;
+        position: relative;
+        max-width: 470px;
+        margin: auto;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      .post-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        margin-bottom: -6px;
+      }
+      .user-info {
+        display: flex;
+        align-items: center;
+      }
+      .user-profile img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-top: 5px;
+        margin-right: 6px;
+        margin-left: 0px;
+        user-select: none;
+      }
+      .username {
+        font-size: 17px;
+        font-weight: 500;
+        margin-right: auto;
+        font-family: 'Fredoka';
+        user-select: none;
+      }
+      .more-options{
+        cursor: pointer;
+        font-size: 5px;
+      }
+      .more-options .material-symbols-rounded{
+        font-size: 26px;
+        user-select: none;
+      }
+      
+      /* Style for the post content (image or video) */
+      .post-content img {
+        width: 100%;
+        display: none;
+        border-radius: 4px;
+        user-select: none;
+        border: 1px solid #c0c0c0;
+        box-sizing: border-box;
+      }
+      .post-content video {
+        width: 100%;
+        display: none;
+        border-radius: 4px;
+        user-select: none;
+        border: 1px solid #c0c0c0;
+        box-sizing: border-box;
+      }
+      
+      .slider-container {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      
+      .slider-container img {
+        width: 100%;
+        height: auto;
+        display: none;
+        transition: opacity 0.5s ease-in-out; /* Add transition for smooth slide */
+      }
+      
+      .slider-container img:first-child {
+        display: block;
+      }
+      .slider-counter {
+        position: absolute;
+        font-size: 18px;
+        font-family: 'Fredoka';
+        font-weight: 470;
+        top: 10px;
+        right: 10px;
+        background-color: grey;
+        color: #fff;
+        padding: 6px;
+        border-radius: 40px;
+      }
+    
+      .slider-icons .material-symbols-rounded {
+        font-size: 30px;
+        font-weight: 700;
+        background-color: #fff; /* Background color for the circular shape */
+        color: #000; /* Icon color */
+        border-radius: 50%; /* Make it circular */
+        padding: 0px; /* Adjust padding for better spacing */
+        user-select: none;
+    }
+      .slider-prev,
+      .slider-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        cursor: pointer;
+      }
+    
+      .slider-prev {
+        left: 10px;
+      }
+      
+      .slider-next {
+        right: 10px;
+      }
+      .post-actions {
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        margin-left: 0px;
+        position: relative;
+    }
+    .action {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    .action i{
+        font-size: 26px;
+        font-weight: 500;
+        color: #000;
+        margin-top: 7px;
+        margin-right: -7px;
+        user-select: none;
+    }
+    .action .material-symbols-rounded {
+        font-size: 30px;
+        font-weight: 500;
+        margin-right: -10px;
+        margin-top: 7px;
+        user-select: none;
+        
+    }
+    .action.comment {
+        font-size: 25px;
+        margin-top: 0px;
+        color: #000;
+      }
+      
+    .action.share  {
+        font-size: 25px;
+        margin-top: 0px;
+        color: #000;
+    }
+    .action.share .material-symbols-rounded{
+        font-size: 33px;
+        margin-right: -10px;
+        margin-top: 0px;
+        transform: rotate(320deg);
+    }
+    .action.bookmark {
+        margin-right: 10px;
+        margin-left: auto;
+        color: #000;
+    }
+    
+      .post-description {
+        margin-top: 10px;
+        font-size: 17px;
+        font-family: 'Fredoka';
+        font-weight: 400;
+    }
+    
+    @media screen and (max-width:600px){
+      html, body {
+        margin: 0;
+        overflow-x: hidden !important;
+      }
+      .post-widget{
+        width: 100vw;
+        margin: 0;
+        max-width: none;
+      }
+      .post-content img, .post-content video{
+        border: 0;
+        border-radius: 0;
+      }
+      .action i {
+        font-size: 25px;
+        color: #000;
+        margin-top: 7px;
+      }
+      .action .material-symbols-rounded {
+        font-size: 29px;
+        margin-top: 7px;
+      }
+      .user-profile img{
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+  </style>
+  <style>
+    .topbar {
+        position: fixed;
+        top: 0;
+        left: 350px; /* Width of lsidebar */
+        right: 350px; /* Width of rsidbar */
+        height: 60px; /* Adjust the height as needed */
+        background-color: #ffffff; /* Background color for the top bar */
+        z-index: 1; /* Set the z-index to be above lsidebar and below rsidbar */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        border-bottom: 1px solid #e0e0e0;
+        transition: top 0.3s;
+    }
+    
+    .company-name {
+        font-family: 'fredoka';
+        font-size: 34px; /* Adjust the font size as needed */
+        font-weight: 500;
+        flex: 1; /* Add this to make the company name take up remaining space */
+        text-align: center; /* Center the text horizontally */
+        user-select: none;
+    }
+    
+    .icon {
+        font-size: 24px;
+        cursor: pointer; /* Add this to make it look clickable */
+    }
+    .topbar.scrolled {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(7px);
+        box-shadow: 0 2px 2px #e0e0e0;
+        transition: background-color 0.3s ease;
+        
+    }
+    .topbar .t2-icon .material-symbols-rounded{
+        display: none;
+    }
+    .topbar .topbar-icon .dm-mode-1 i {
+        font-size: 32px;
+    }
+    
+    
+    @media screen and (max-width:1300px){
+        .topbar{
+            left: 112px;
+            right: 0;
+        }
+    }
+    
+    @media screen and (max-width:600px){
+        .topbar{
+            margin: 0;
+            left: 0;
+            right: 0;
+            height: 45px;
+        }
+        .company-name{
+            font-size: 24px;
+        }
+        .menu-icon{
+            display: block;
+            left: 0;
+        }
+        .topbar .t2-icon .material-symbols-rounded{
+            margin: 0;
+            display: block;
+            color: #000;
+            font-size: 22px;
+            cursor: pointer;
+            user-select: none;
+            position: absolute; /* Position the icons absolutely within the topbar */
+            top: 50%; /* Move the top position to the center of the topbar */
+            transform: translateY(-50%); /* Adjust to vertically center the icon */
+            left: 8px; /* Adjust the left position as needed */
+        }
+        .topbar .topbar-icon .dm-mode-1 .material-symbols-rounded {
+            font-size: 22px;
+            right: 0;
+            margin-right: -8px;
+        }
+    }
+    
+  </style>
+  <title>SUBBU</title>
+</head>
+<body>
+  <div class="main">
+    <div class="content">
+        <div class="post-widget">
+            <div class="post-header">
+              <div class="user-info">
+                <div class="user-profile">
+                  <img  src="1.jpg" alt="User Profile Image">
+                </div>
+                <p class="username">Username</p>
+              </div>
+              <div class="more-options"><i class="material-symbols-rounded">more_horiz</i></div>
+            </div>
+    
+            <div class="post-content">
+              <div class="slider-container">
+                <div class="slider-counter">1/2</div>
+                <img  src="abcdef.jpg" alt="Lazy Loaded Image">
+                <img class="image-zoom" src="abc.avif" alt="Image 1">
+                <img class="image-zoom" src="1.jpg" alt="Image 1">
+                <video src="song.mp4" controls></video>
+                <div class="slider-icons">
+                  <div class="slider-prev"><i class="material-symbols-rounded">chevron_left</i></div>
+                  <div class="slider-next"><i class="material-symbols-rounded">chevron_right</i></div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="post-actions">
+              <div class="action love">
+                  <i class="material-symbols-rounded">favorite</i>
+              </div>
+              <div class="action comment open-popup">
+                  <i class="fa-regular fa-comment fa-flip-horizontal"></i>
+              </div>
+              <div class="action share" >
+                  <i class="material-symbols-rounded">send</i>
+              </div>
+              <div class="action bookmark"  id="bookmark">
+                  <i class="material-symbols-rounded">bookmark</i>
+              </div>
+            </div>
+            <div class="post-description">
+              <p>This is the description of the post.</p>
+            </div>
+          </div>
+
+          <div class="post-widget">
+            <div class="post-header">
+              <div class="user-info">
+                <div class="user-profile">
+                  <img  src="1.jpg" alt="User Profile Image">
+                </div>
+                <p class="username">Username</p>
+              </div>
+              <div class="more-options"><i class="material-symbols-rounded">more_horiz</i></div>
+            </div>
+    
+            <div class="post-content">
+              <div class="slider-container">
+                <div class="slider-counter">1/2</div>
+                <img  src="abcdef.jpg" alt="Lazy Loaded Image">
+                <img class="image-zoom" src="abc.avif" alt="Image 1">
+                <img class="image-zoom" src="1.jpg" alt="Image 1">
+                <video src="song.mp4" controls></video>
+                <div class="slider-icons">
+                  <div class="slider-prev"><i class="material-symbols-rounded">chevron_left</i></div>
+                  <div class="slider-next"><i class="material-symbols-rounded">chevron_right</i></div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="post-actions">
+              <div class="action love">
+                  <i class="material-symbols-rounded">favorite</i>
+              </div>
+              <div class="action comment open-popup">
+                  <i class="fa-regular fa-comment fa-flip-horizontal"></i>
+              </div>
+              <div class="action share" >
+                  <i class="material-symbols-rounded">send</i>
+              </div>
+              <div class="action bookmark"  id="bookmark">
+                  <i class="material-symbols-rounded">bookmark</i>
+              </div>
+            </div>
+            <div class="post-description">
+              <p>This is the description of the post.</p>
+            </div>
+          </div>
+    </div>
+  </div>
+
+    <div class="rsidebar" id="rsidebar">
+      <div id="digital-clock" class="digital-clock"></div>
+    </div>
+    
+  </div>
+
+<script>
+    
+// Define the menu items as an array of objects
+const menuItems = [
+{ id: 'home', icon: 'home', label: 'Home' },
+{ id: 'post', icon: 'add_circle', label: 'Post' },
+{ id: 'explore', icon: 'search', label: 'Explore' },
+{ id: 'images', icon: 'image', label: 'Images' },
+{ id: 'videos', icon: 'videocam', label: 'Videos' },
+{ id: 'files', icon: 'folder_open', label: 'Files' },
+{ id: 'saved', icon: 'bookmark', label: 'Saved' },
+{ id: 'profile', icon: 'person', label: 'Profile' },
+{ id: 'logout', icon: 'logout', label: 'Logout' },
+];
+
+// Define a function to generate the HTML for a single menu item
+function generateMenuItemHTML(item) {
+let activeClass = '';
+if (window.location.pathname.endsWith(item.id + '.html')) {
+    activeClass = 'active';
+}
+return `
+  <a href="${item.id}.html" class="${item.id}-space ${activeClass}">
+    <i class="material-symbols-rounded">${item.icon}</i>
+    <span>${item.label}</span>
+  </a>
+`;
+}
+
+// Define a function to generate the HTML for the entire sidebar
+function generateSidebarHTML() {
+return `
+  <div class="lsidebar">
+    <div class="elements">
+      <div class="wish" id="greeting"></div>
+      <div class="close-btn" onclick="closeSidebar()">
+      <i class="material-symbols-rounded">close</i>
+      </div>
+      <div class="space-top"></div>
+      ${menuItems.map(generateMenuItemHTML).join('')}
+      <div class="space-bottom"></div>
+    </div>
+  </div>
+`;
+}
+
+// Define a function to append the generated sidebar HTML to the page
+function appendSidebarHTML() {
+const sidebarContainer = document.createElement('div');
+sidebarContainer.innerHTML = generateSidebarHTML();
+document.body.appendChild(sidebarContainer);
+}
+
+// Call the function to append the generated sidebar HTML to the page
+appendSidebarHTML();
+//wish
+document.addEventListener('DOMContentLoaded', function () {
+// Update the greeting initially
+updateGreeting();
+// Update the greeting every minute
+setInterval(updateGreeting, 90000);
+});
+function updateGreeting() {
+const greetingElement = document.getElementById('greeting');
+const currentTime = new Date().getHours();
+let greetingMessage = '';
+let emoji = '';
+if (currentTime >= 5 && currentTime < 12) {
+    greetingMessage = 'Morning';
+    emoji = '🌞';
+} else if (currentTime >= 12 && currentTime < 18) {
+    greetingMessage = 'Afternoon';
+    emoji = '☀️';
+} else {
+    greetingMessage = 'Evening';
+    emoji = '🌃';
+}
+greetingElement.textContent = `Good ${greetingMessage} ${emoji}`;
+}
+//off-canvas
+document.addEventListener('DOMContentLoaded', function () {
+// Add event listener to the close icon
+const closeIcon = document.getElementById('menu-icon');
+closeIcon.addEventListener('click', toggleSidebar);
+
+// Call the function to handle sidebar behavior based on screen size
+handleSidebarBehavior();
+
+// Update sidebar behavior when the window is resized
+window.addEventListener('resize', handleSidebarBehavior);
+});
+
+function toggleSidebar() {
+const sidebar = document.querySelector('.lsidebar');
+
+sidebar.classList.toggle('open');
+}
+function closeSidebar() {
+const sidebar = document.querySelector('.lsidebar');
+sidebar.classList.remove('open');
+}
+
+
+function handleSidebarBehavior() {
+const sidebar = document.querySelector('.lsidebar');
+const screenWidth = window.innerWidth;
+
+// If screen width is less than 700px, enable off-canvas mode
+if (screenWidth < 600) {
+    sidebar.classList.add('off-canvas');
+} else {
+    sidebar.classList.remove('off-canvas', 'open');
+}
+}
+</script>
+<script>
+    //digital clock
+function updateDigitalClock() {
+    const clockElement = document.getElementById('digital-clock');
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    const timeFormat = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = hours % 12 || 12; // Convert to 12-hour format
+
+    const timeString = `${formattedHours}:${padZero(minutes)}:${padZero(seconds)} ${timeFormat}`;
+    clockElement.textContent = timeString;
+  }
+
+  // Function to pad zero for single-digit numbers
+  function padZero(number) {
+    return number < 10 ? `0${number}` : number;
+  }
+
+  // Update the digital clock every second
+  setInterval(updateDigitalClock, 1000);
+
+  // Initial clock update
+  updateDigitalClock();
+//scroll
+
+</script>
+<script>
+    
+
+//scrolling effect
+window.addEventListener('scroll', function() {
+    var topbar = document.querySelector('.topbar');
+    if (window.scrollY > 0) {
+        topbar.classList.add('scrolled');
+    } else {
+        topbar.classList.remove('scrolled');
+    }
+});
+// Function to generate the HTML for the topbar
+function generateTopbarHTML() {
+    // Create elements for company name
+    const companyNameDiv = document.createElement('div');
+    companyNameDiv.classList.add('company-name');
+    companyNameDiv.textContent = 'SUBBU';
+
+    // Create elements for menu icon
+    const menuIconDiv = document.createElement('div');
+    menuIconDiv.classList.add('t2-icon');
+    menuIconDiv.style.cursor = 'pointer';
+    menuIconDiv.innerHTML = `
+        
+        <div class="t2-icon" style="cursor: pointer;" id="menu-icon">
+            <i class="material-symbols-rounded">menu</i>
+        </div>
+    `;
+
+    // Create elements for dark mode toggle
+    const darkModeToggleDiv = document.createElement('div');
+    darkModeToggleDiv.classList.add('topbar-icon');
+    darkModeToggleDiv.style.cursor = 'pointer';
+    darkModeToggleDiv.style.userSelect = 'none';
+    darkModeToggleDiv.innerHTML = `
+        <div class="dm-mode-1" id="darkModeToggle">
+            <i class="material-symbols-rounded">dark_mode</i>
+        </div>
+    `;
+
+    // Create topbar container
+    const topbarDiv = document.createElement('div');
+    topbarDiv.classList.add('topbar');
+    topbarDiv.appendChild(companyNameDiv);
+    topbarDiv.appendChild(menuIconDiv);
+    topbarDiv.appendChild(darkModeToggleDiv);
+
+    return topbarDiv;
+}
+
+// Function to append the generated topbar HTML to the page
+function appendTopbarHTML() {
+    const topbarContainer = document.createElement('div');
+    topbarContainer.innerHTML = generateTopbarHTML().outerHTML;
+    document.body.appendChild(topbarContainer);
+}
+
+// Call the function to append the generated topbar HTML to the page
+appendTopbarHTML();
+</script>
+<script>
+    //css file load
+
+document.addEventListener('DOMContentLoaded', function() {
+    const darkModeToggle = document.querySelector('#darkModeToggle');
+
+    // Check if user preference is dark mode
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Check local storage for user's dark mode preference
+    const localStoragePref = localStorage.getItem('darkMode');
+
+    // If local storage pref is null, use user preference
+    if (localStoragePref === null) {
+        if (isDarkMode) {
+            document.body.classList.add('dark-theme');
+            darkModeToggle.innerHTML = '<i class="material-symbols-rounded">wb_sunny</i>';
+        } else {
+            document.body.classList.remove('dark-theme');
+            darkModeToggle.innerHTML = '<i class="material-symbols-rounded">dark_mode</i>';
+        }
+    } else {
+        // If local storage pref is either 'dark' or 'light'
+        if (localStoragePref === 'dark') {
+            document.body.classList.add('dark-theme');
+            darkModeToggle.innerHTML = '<i class="material-symbols-rounded">wb_sunny</i>';
+        } else {
+            document.body.classList.remove('dark-theme');
+            darkModeToggle.innerHTML = '<i class="material-symbols-rounded">dark_mode</i>';
+        }
+    }
+
+    darkModeToggle.addEventListener('click', function() {
+        // If dark mode is on...
+        if (document.body.classList.contains('dark-theme')) {
+            // Turn it off
+            document.body.classList.remove('dark-theme');
+            darkModeToggle.innerHTML = '<i class="material-symbols-rounded">dark_mode</i>';
+            localStorage.setItem('darkMode', 'light');
+        } else {
+            // If dark mode is off...
+            // Turn it on
+            document.body.classList.add('dark-theme');
+            darkModeToggle.innerHTML = '<i class="material-symbols-rounded">wb_sunny</i>';
+            localStorage.setItem('darkMode', 'dark');
+        }
+    });
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const postWidgets = document.querySelectorAll('.post-widget');
+      
+        postWidgets.forEach((postWidget, widgetIndex) => {
+          const sliderContainer = postWidget.querySelector('.slider-container');
+          const slides = sliderContainer.querySelectorAll('img, video');
+          const sliderIcons = postWidget.querySelector('.slider-icons');
+          const sliderCounter = postWidget.querySelector('.slider-counter');
+          const prevArrow = postWidget.querySelector('.slider-prev');
+          const nextArrow = postWidget.querySelector('.slider-next');
+      
+          let currentIndex = 0;
+          let currentVideo = null;
+      
+          function showSlide(index) {
+            slides.forEach((slide, i) => {
+              if (i === index) {
+                slide.style.display = 'block';
+                if (slide.tagName.toLowerCase() === 'video') {
+                  currentVideo = slide;
+                  if (isElementInViewport(sliderContainer)) {
+                    currentVideo.play().then(() => {
+                      console.log('Video is autoplaying.');
+                    }).catch(error => {
+                      console.error('Error while autoplaying video:', error);
+                    });
+                  } else {
+                    currentVideo.pause();
+                  }
+                }
+              } else {
+                slide.style.display = 'none';
+                if (slide.tagName.toLowerCase() === 'video') {
+                  slide.pause();
+                }
+              }
+            });
+      
+            if (slides.length > 1) {
+              sliderCounter.textContent = `${index + 1}/${slides.length}`;
+              sliderCounter.style.display = 'block';
+            } else {
+              sliderCounter.textContent = '';
+              sliderCounter.style.display = 'none';
+            }
+      
+            if (currentIndex === 0) {
+              prevArrow.style.display = 'none';
+              nextArrow.style.display = 'block';
+            } else if (currentIndex === slides.length - 1) {
+              prevArrow.style.display = 'block';
+              nextArrow.style.display = 'none';
+            } else {
+              prevArrow.style.display = 'block';
+              nextArrow.style.display = 'block';
+            }
+          }
+      
+          function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+          }
+      
+          function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+          }
+      
+          if (slides.length > 1) {
+            sliderIcons.style.display = 'block';
+          } else {
+            sliderIcons.style.display = 'none';
+          }
+      
+          nextArrow.addEventListener('click', nextSlide);
+          prevArrow.addEventListener('click', prevSlide);
+      
+          sliderContainer.addEventListener('mouseover', function () {
+            sliderIcons.style.opacity = '1';
+          });
+      
+          sliderContainer.addEventListener('mouseout', function () {
+            sliderIcons.style.opacity = '0';
+          });
+      
+          showSlide(currentIndex);
+      
+          // Prevent right-click on images and videos
+          slides.forEach((slide) => {
+            slide.addEventListener('contextmenu', function (event) {
+              event.preventDefault();
+            });
+          });
+        });
+      
+        // Check if an element is in the viewport
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+      
+        // Pause videos that are not in the viewport
+        window.addEventListener('scroll', function () {
+          postWidgets.forEach((postWidget) => {
+            const video = postWidget.querySelector('video');
+            if (video) {
+              const sliderContainer = postWidget.querySelector('.slider-container');
+              if (!isElementInViewport(sliderContainer)) {
+                video.pause();
+              }
+            }
+          });
+        });
+      });
+      
+</script>
+</body>
+</html>
