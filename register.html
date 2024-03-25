@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "fredoka", sans-serif;
+          }
+          body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgb(0,0,0,0);
+          }
+          .container {
+            position: relative;
+            max-width: 475px;
+            width: 100%;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(168, 169, 173);
+          }
+          .container header {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+          }
+          .container .form {
+            margin-top: 30px;
+          }
+
+          div.input-block {
+            position: relative;
+          }
+          div.input-block input {
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: #000;
+            width: 100%;
+            padding: 15px 15px;
+            border: 1px solid  #000;
+            border-radius: 5px;
+            margin-bottom: 8px;
+          }
+          div.input-block span.placeholder {
+            position: absolute;
+            margin: 17px 0;
+            padding: 0 4px;
+            color:  #6c757d;
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            top: 12px;
+            left: 7px;
+            bottom: 35px;
+            transition: all 0.2s;
+            transform-origin: 0% 0%;
+            background: none;
+            pointer-events: none;
+          }
+          div.input-block input:valid + span.placeholder,
+          div.input-block input:focus + span.placeholder {
+            transform: scale(0.8) translateY(-25px);
+            background: transparent;
+            font-size: 1.2rem;
+
+          }
+          div.input-block input:focus{
+            color: #284B63;
+            border-color: #284B63;
+          }
+          div.input-block input:focus + span.placeholder {
+            color: #284B63;
+          }
+          .form button {
+            height: 55px;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #0A66C2;
+            border-radius: 50px;
+          }
+          a{
+            font-weight: 500;
+            font-size: 18px;
+            color: #0A66C2;
+            text-decoration: none;
+            padding: 5px;
+          }
+          a:hover{
+            text-decoration: underline;
+            background-color: #D0E8FF;
+            padding: 5px;
+            border-radius: 50px;
+          }
+          @media screen and (max-width:500px) {
+            .container{
+                width: 100vh;
+                box-shadow: none;
+            }
+          }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header>Registration Form</header>
+        <form action="#" class="form" method="post">
+            <div class="input-block">
+                <input type="text" name="input-text" id="input-text" required spellcheck="false">
+                <span class="placeholder">Username</span>
+            </div>
+            <div class="column">
+                <div class="input-block">
+                    <input type="text" name="input-text" id="input-text" required spellcheck="false">
+                    <span class="placeholder">First Name</span>
+                </div>
+                <div class="input-block">
+                    <input type="text" name="input-text" id="input-text" required spellcheck="false">
+                    <span class="placeholder">Last Name</span>
+                </div>
+            </div>
+            <div class="input-block">
+                <input type="text" name="input-text" id="input-text" required spellcheck="false">
+                <span class="placeholder">Email</span>
+            </div>
+            <div class="column">
+                <div class="input-block">
+                    <input type="password" name="input-text" id="input-text" required spellcheck="false">
+                    <span class="placeholder">Password</span>
+                </div>
+                <div class="input-block">
+                    <input type="password" name="input-text" id="input-text" required spellcheck="false">
+                    <span class="placeholder">Confirm Password</span>
+                </div>
+            </div>
+            <a href="#">Already have an account?</a>
+            <button id="subut">Submit</button>
+        </form>
+</body>
+</html>
